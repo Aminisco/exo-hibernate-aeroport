@@ -40,21 +40,27 @@ public class DataInitializer implements ServletContextListener {
                 2
         );
 
+
         Plane plane1 = new Plane(
                 "123",
-                5
+                5,
+                null,
+                type2
         );
 
         Plane plane2 = new Plane(
                 "345",
-                6
+                6,
+                null,
+                type1
         );
+
+//        planeTypeRepository.save(type1);
+//        planeTypeRepository.save(type2);
 
         planeRepository.save(plane1);
         planeRepository.save(plane2);
 
-        planeTypeRepository.save(type1);
-        planeTypeRepository.save(type2);
 
     }
 }
