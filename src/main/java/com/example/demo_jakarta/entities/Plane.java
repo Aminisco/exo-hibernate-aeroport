@@ -1,10 +1,7 @@
 package com.example.demo_jakarta.entities;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import org.hibernate.validator.constraints.Range;
 
 import java.util.Objects;
@@ -22,7 +19,7 @@ public class Plane extends BaseEntity<Long> {
     @ManyToOne(fetch = FetchType.LAZY)
     private Owner owner;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private PlaneType planeType;
 
     public Plane(){}
