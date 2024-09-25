@@ -10,5 +10,9 @@
 <a href="${pageContext.request.contextPath}/plane">Plane</a>
 <br>
 <a href="${pageContext.request.contextPath}/planeType">PlaneType</a>
+<br>
+<a href="${pageContext.request.contextPath}/pilote">Pilote</a>
+<br>
+<a href="${pageContext.request.contextPath}/pilotePlaneType">Vols</a>
 </body>
 </html>

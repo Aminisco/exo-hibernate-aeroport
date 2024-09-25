@@ -9,10 +9,10 @@ import java.util.Objects;
 @Entity
 public class Plane extends BaseEntity<Long> {
 
-    @Column(unique=true, nullable = false, length = 50)
+    @Column(unique = true,nullable = false, length = 50)
     private String immatriculation;
 
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     @Range(min = 0)
     private int flycount;
 
